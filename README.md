@@ -119,7 +119,7 @@ We thank Dr. Premarathne Upeka and Dr. Sampath K. Perera for their guidance, and
 
 ### Third-party design files
 
-The mechanical design of the handheld enclosure, shaft and coil housing is adapted from the 3D CAD model [*Metal detector prototype for children*](https://grabcad.com/library/metal-detector-prototype-for-children-1) published on the GrabCAD Library by \[author name]. We thank the author for sharing the design files. All electronics (oscillators, buffers, Gilbert-cell mixer, filter, audio stage, power supply), the search coil, the engineering calculations, the simulation and the PCB are the original work of Team Synergy. The enclosure was modified to fit our PCB, battery and coil.
+The mechanical design of the handheld enclosure, shaft and coil housing is adapted from the 3D CAD model [*Metal detector prototype for children*](https://grabcad.com/library/metal-detector-prototype-for-children-1) published on the GrabCAD Library by Citizen Rus. We thank the author for sharing the design files. All electronics (oscillators, buffers, Gilbert-cell mixer, filter, audio stage, power supply), the search coil, the engineering calculations, the simulation and the PCB are the original work of Team Synergy. The enclosure was modified to fit our PCB, battery and coil.
 
 ## References
 
