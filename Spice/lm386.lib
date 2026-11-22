@@ -1,0 +1,49 @@
+.subckt LM386 1 2 3 4 5 6 7 8
+* pin map: 1=GAIN 2=IN- 3=IN+ 4=GND 5=OUT 6=VS 7=BYPASS 8=GAIN
+
+* input emitter-follower buffers
+Q1 4 2 10011 ddpnp
+R1 2 4 50k
+Q2 4 3 10012 ddpnp
+R2 3 4 50k
+
+* differential input stage, gain-setting resistors, internal feedback
+Q3 10013 10011 10008 ddpnp
+Q4 10014 10012 1 ddpnp
+R3 6 7 15k
+R4 7 10008 15k
+R5 10008 8 150
+R6 8 1 1.35k
+R7 1 5 15k
+
+* input stage current mirror
+Q5 10013 10013 4 ddnpn
+Q6 10014 10013 4 ddnpn
+
+* voltage gain stage & rolloff cap
+Q7 10017 10014 4 ddnpn
+C1 10014 10017 15pf
+
+* current mirror source for gain stage
+I1 10002 6 DC 5m
+Q8 10004 10002 6 ddpnp
+Q9 10002 10002 6 ddpnp
+
+* Sziklai-connected push-pull output stage
+Q10 10018 10017 5 ddpnp
+Q11 10004 10004 10009 ddnpn 100
+Q12 10009 10009 10017 ddnpn 100
+Q13 6 10004 5 ddnpn 100
+Q14 5 10018 4 ddnpn 100
+
+.model ddnpn NPN(Is=10f Xti=3 Eg=1.11 Vaf=100
++ Bf=400 Ise=0 Ne=1.5 Ikf=0 Nk=.5 Xtb=1.5 Var=100
++ Br=1 Isc=0 Nc=2 Ikr=0 Rc=0 Cjc=2p Mjc=.3333
++ Vjc=.75 Fc=.5 Cje=5p Mje=.3333 Vje=.75 Tr=10n
++ Tf=1n Itf=1 Xtf=0 Vtf=10)
+.model ddpnp PNP(Is=10f Xti=3 Eg=1.11 Vaf=100
++ Bf=200 Ise=0 Ne=1.5 Ikf=0 Nk=.5 Xtb=1.5 Var=100
++ Br=1 Isc=0 Nc=2 Ikr=0 Rc=0 Cjc=2p Mjc=.3333
++ Vjc=.75 Fc=.5 Cje=5p Mje=.3333 Vje=.75 Tr=10n
++ Tf=1n Itf=1 Xtf=0 Vtf=10)
+.ends LM386
