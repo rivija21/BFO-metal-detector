@@ -67,7 +67,7 @@ The circuit was captured in LTspice and verified in three passes: `.op` (all dev
 |PCB design|4-layer layout files|
 |Bill of materials|Exported from Altium Designer|
 |LTspice netlist|Full simulation netlist|
-|Enclosure|CAD model of the PLA enclosure|
+|Enclosure|CAD model of the PLA enclosure, adapted from a third-party GrabCAD model (see Acknowledgements)|
 
 ## Getting started
 
@@ -111,11 +111,15 @@ The user manual is the authoritative procedure. In outline:
 |240722F|D. H. Wijendra|Schematic design, PCB design|
 |240577M|R. A. T. J. Rupasinghe|Breadboard implementation, debugging|
 |240730D|W. M. V. A. Wijesinghe|PCB soldering, schematic design|
-|240731G|T. W. M. R. P. Wijesundara|Enclosure design, documentation|
+|240731G|T. W. M. R. P. Wijesundara|Enclosure adaptation, documentation|
 
 ## Acknowledgements
 
 We thank Dr. Premarathne Upeka and Dr. Sampath K. Perera for their guidance, and the laboratory assistants of the Digital Laboratory, Analog Laboratory and Electronics Workshop, together with our colleagues and senior students, for technical assistance and help sourcing components.
+
+### Third-party design files
+
+The mechanical design of the handheld enclosure, shaft and coil housing is adapted from the 3D CAD model [*Metal detector prototype for children*](https://grabcad.com/library/metal-detector-prototype-for-children-1) published on the GrabCAD Library by \[author name]. We thank the author for sharing the design files. All electronics (oscillators, buffers, Gilbert-cell mixer, filter, audio stage, power supply), the search coil, the engineering calculations, the simulation and the PCB are the original work of Team Synergy. The enclosure was modified to fit our PCB, battery and coil.
 
 ## References
 
@@ -125,4 +129,6 @@ We thank Dr. Premarathne Upeka and Dr. Sampath K. Perera for their guidance, and
 4. Texas Instruments, *LM386 Low Voltage Audio Power Amplifier* datasheet.
 5. STMicroelectronics, *L78xx Positive Voltage Regulators* datasheet.
 6. ON Semiconductor, *2N5484* datasheet.
+
+## 
 
